@@ -45,6 +45,8 @@ if [ $ARCH = "aarch64" ]; then
 		L4T_REVISION=$(echo $L4T_VERSION_STRING | cut -f 2 -d ',' | grep -Po '(?<=REVISION: )[^;]+')
 	fi
 
+	L4T_RELEASE="34"
+	L4T_REVISION="1.1"
 	L4T_REVISION_MAJOR=${L4T_REVISION:0:1}
 	L4T_REVISION_MINOR=${L4T_REVISION:2:1}
 

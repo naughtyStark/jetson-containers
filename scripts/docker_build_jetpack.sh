@@ -51,7 +51,7 @@ source scripts/opencv_version.sh
 build_jetpack()
 {
 	local base_image=$1
-	local container_tag="jetpack:r$L4T_VERSION"
+	local container_tag="jetpack:r34.1.1"
 
 	# print available packages
 	grep -h -P -o "^Package: \K.*" /var/lib/apt/lists/repo.download.nvidia.com_jetson_common_dists_*_main_binary-arm64_Packages | sort -u
@@ -96,6 +96,6 @@ build_jetpack()
 
 }
 	
-build_jetpack $BASE_IMAGE_L4T
+build_jetpack nvcr.io/nvidia/l4t-base:r34.1
 
 
